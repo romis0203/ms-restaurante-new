@@ -39,7 +39,7 @@ public class ReservaController {
 
         reservaDTO = reservaService.saveReserva(reservaDTO);
 
-        URI uri  = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id]").buildAndExpand(reservaDTO.getId()).toUri();
+        URI uri  = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(reservaDTO.getId()).toUri();
 
         return ResponseEntity.created(uri).body(reservaDTO);
     }
